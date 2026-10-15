@@ -1,39 +1,44 @@
 /*********************************************************************************************************************
-* CH32V307VCT6 Opensourec Library ����CH32V307VCT6 ��Դ�⣩��һ�����ڹٷ� SDK �ӿڵĵ�������Դ��
-* Copyright (c) 2022 SEEKFREE ��ɿƼ�
+* CH32V307VCT6 Opensourec Library 即（CH32V307VCT6 开源库）是一个基于官方 SDK 接口的第三方开源库
+* Copyright (c) 2022 SEEKFREE 逐飞科技
 *
-* ���ļ���CH32V307VCT6 ��Դ���һ����
+* 本文件是CH32V307VCT6 开源库的一部分
 *
-* CH32V307VCT6 ��Դ�� ���������
-* �����Ը���������������ᷢ���� GPL��GNU General Public License���� GNUͨ�ù�������֤��������
-* �� GPL �ĵ�3�棨�� GPL3.0������ѡ��ģ��κκ����İ汾�����·�����/���޸���
+* CH32V307VCT6 开源库 是免费软件
+* 您可以根据自由软件基金会发布的 GPL（GNU General Public License，即 GNU通用公共许可证）的条款
+* 即 GPL 的第3版（即 GPL3.0）或（您选择的）任何后来的版本，重新发布和/或修改它
 *
-* ����Դ��ķ�����ϣ�����ܷ������ã�����δ�������κεı�֤
-* ����û�������������Ի��ʺ��ض���;�ı�֤
-* ����ϸ����μ� GPL
+* 本开源库的发布是希望它能发挥作用，但并未对其作任何的保证
+* 甚至没有隐含的适销性或适合特定用途的保证
+* 更多细节请参见 GPL
 *
-* ��Ӧ�����յ�����Դ���ͬʱ�յ�һ�� GPL �ĸ���
-* ���û�У������<https://www.gnu.org/licenses/>
+* 您应该在收到本开源库的同时收到一份 GPL 的副本
+* 如果没有，请参阅<https://www.gnu.org/licenses/>
 *
-* ����ע����
-* ����Դ��ʹ�� GPL3.0 ��Դ����֤Э�� ������������Ϊ���İ汾
-* ��������Ӣ�İ��� libraries/doc �ļ����µ� GPL3_permission_statement.txt �ļ���
-* ����֤������ libraries �ļ����� �����ļ����µ� LICENSE �ļ�
-* ��ӭ��λʹ�ò����������� ���޸�����ʱ���뱣����ɿƼ��İ�Ȩ����������������
+* 额外注明：
+* 本开源库使用 GPL3.0 开源许可证协议 以上许可申明为译文版本
+* 许可申明英文版在 libraries/doc 文件夹下的 GPL3_permission_statement.txt 文件中
+* 许可证副本在 libraries 文件夹下 即该文件夹下的 LICENSE 文件
+* 欢迎各位使用并传播本程序 但修改内容时必须保留逐飞科技的版权声明（即本声明）
 *
-* �ļ�����          isr
-* ��˾����          �ɶ���ɿƼ����޹�˾
-* �汾��Ϣ          �鿴 libraries/doc �ļ����� version �ļ� �汾˵��
-* ��������          MounRiver Studio V1.8.1
-* ����ƽ̨          CH32V307VCT6
-* ��������          https://seekfree.taobao.com/
+* 文件名称          isr
+* 公司名称          成都逐飞科技有限公司
+* 版本信息          查看 libraries/doc 文件夹内 version 文件 版本说明
+* 开发环境          MounRiver Studio V1.8.1
+* 适用平台          CH32V307VCT6
+* 店铺链接          https://seekfree.taobao.com/
 *
-* �޸ļ�¼
-* ����                                      ����                             ��ע
-* 2022-09-15        ��W            first version
+* 修改记录
+* 日期                                      作者                             备注
+* 2022-09-15        大W            first version
 ********************************************************************************************************************/
 
 #include "zf_common_headfile.h"
+
+// BSP 层中断处理函数（具体硬件动作都在 bsp 层实现，这里只做中断向量分发）
+#include "bsp_pit.h"                                                            // 定时器中断（任务6 / 任务4）
+#include "bsp_exti.h"                                                           // 外部中断（任务9）
+
 void NMI_Handler(void)       __attribute__((interrupt()));
 void HardFault_Handler(void) __attribute__((interrupt()));
 
@@ -98,9 +103,9 @@ void USART3_IRQHandler(void)
 {
     if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
     {
-#if DEBUG_UART_USE_INTERRUPT                                                    // ������� debug �����ж�
-        debug_interrupr_handler();                                              // ���� debug ���ڽ��մ������� ���ݻᱻ debug ���λ�������ȡ
-#endif                                                                          // ����޸��� DEBUG_UART_INDEX ����δ�����Ҫ�ŵ���Ӧ�Ĵ����ж�ȥ
+#if DEBUG_UART_USE_INTERRUPT                                                    // 如果开启 debug 串口中断
+        debug_interrupr_handler();                                              // 调用 debug 串口接收处理函数 数据会被 debug 环形缓冲区读取
+#endif                                                                          // 如果修改了 DEBUG_UART_INDEX 那这段代码需要放到对应的串口中断去
         USART_ClearITPendingBit(USART3, USART_IT_RXNE);
     }
 }
@@ -220,6 +225,9 @@ void EXTI9_5_IRQHandler(void)
     }
     if(SET == EXTI_GetITStatus(EXTI_Line8))
     {
+        // -----------------* 任务9：按键编码 A0(D8) 外部中断 *-----------------
+        bsp_exti_key_isr();
+        // -----------------* 任务9：按键编码 A0(D8) 外部中断 *-----------------
         EXTI_ClearITPendingBit(EXTI_Line8);
 
     }
@@ -236,9 +244,9 @@ void EXTI15_10_IRQHandler(void)
     if(SET == EXTI_GetITStatus(EXTI_Line10))
     {
 
-        // �˴���д�û����� (A10/B10..E10) ���Ŵ���
+        // 此处编写用户代码 (A10/B10..E10) 引脚触发
 
-        // �˴���д�û����� (A10/B10..E10) ���Ŵ���
+        // 此处编写用户代码 (A10/B10..E10) 引脚触发
 
         EXTI_ClearITPendingBit(EXTI_Line10);
     }
@@ -249,33 +257,36 @@ void EXTI15_10_IRQHandler(void)
     }
     if(SET == EXTI_GetITStatus(EXTI_Line12))
     {
+        // -----------------* 任务9：按键编码 A1(B12) 外部中断 *-----------------
+        bsp_exti_key_isr();
+        // -----------------* 任务9：按键编码 A1(B12) 外部中断 *-----------------
         EXTI_ClearITPendingBit(EXTI_Line12);
 
     }
     if(SET == EXTI_GetITStatus(EXTI_Line13))
     {
-        // -----------------* ToF INT �����ж� Ԥ���жϴ������� *-----------------
+        // -----------------* ToF INT 更新中断 预置中断处理函数 *-----------------
         tof_module_exti_handler();
-        // -----------------* ToF INT �����ж� Ԥ���жϴ������� *-----------------
-        // �˴���д�û����� (A13/B13..E13) ���Ŵ���
+        // -----------------* ToF INT 更新中断 预置中断处理函数 *-----------------
+        // 此处编写用户代码 (A13/B13..E13) 引脚触发
 
-        // �˴���д�û����� (A13/B13..E13) ���Ŵ���
+        // 此处编写用户代码 (A13/B13..E13) 引脚触发
 
         EXTI_ClearITPendingBit(EXTI_Line13);
 
     }
     if(SET == EXTI_GetITStatus(EXTI_Line14))
     {
-        // -----------------* DM1XA ���ź� Ԥ���жϴ������� *-----------------
+        // -----------------* DM1XA 光信号 预置中断处理函数 *-----------------
         dm1xa_light_callback();
-        // -----------------* DM1XA ���ź� Ԥ���жϴ������� *-----------------
+        // -----------------* DM1XA 光信号 预置中断处理函数 *-----------------
         EXTI_ClearITPendingBit(EXTI_Line14);
     }
     if(SET == EXTI_GetITStatus(EXTI_Line15))
     {
-        // -----------------* DM1XA ��/�����ź� Ԥ���жϴ������� *-----------------
+        // -----------------* DM1XA 声/反馈信号 预置中断处理函数 *-----------------
         dm1xa_sound_callback();
-        // -----------------* DM1XA ��/�����ź� Ԥ���жϴ������� *-----------------
+        // -----------------* DM1XA 声/反馈信号 预置中断处理函数 *-----------------
         EXTI_ClearITPendingBit(EXTI_Line15);
     }
 }
@@ -333,21 +344,16 @@ void TIM5_IRQHandler(void)
 
 void TIM6_IRQHandler(void)
 {
-    if(TIM_GetITStatus(TIM6, TIM_IT_Update) != RESET)
-    {
-       TIM_ClearITPendingBit(TIM6, TIM_IT_Update );
-
-    }
+    // -----------------* 任务6：1ms 系统节拍中断（同时进行按键扫描） *-----------------
+    bsp_pit_system_isr();
+    // -----------------* 任务6：1ms 系统节拍中断（同时进行按键扫描） *-----------------
 }
 
 void TIM7_IRQHandler(void)
 {
-    if(TIM_GetITStatus(TIM7, TIM_IT_Update) != RESET)
-    {
-       TIM_ClearITPendingBit(TIM7, TIM_IT_Update );
-
-
-    }
+    // -----------------* 任务6：定时器中断直接控制 LED 翻转 *-----------------
+    bsp_pit_led_isr();
+    // -----------------* 任务6：定时器中断直接控制 LED 翻转 *-----------------
 }
 
 

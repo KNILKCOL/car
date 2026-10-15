@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Seekfree_CH32V307VCT6_Opensource_Library",
+			"path": "c:\\Users\\32656\\Desktop\\car\\car\\program\\project\\mrs"
+		}
+	],
+	"settings": {
+		"mrs.workspace.type": "project",
+		"files.associations": {
+			"*.c": "c",
+			"*.h": "cpp",
+			"*.hxx": "cpp",
+			"*.hpp": "cpp",
+			"*.c++": "cpp",
+			"*.cpp": "cpp",
+			"*.cxx": "cpp",
+			"*.cc": "cpp",
+			"*.hh": "cpp",
+			"*.h++": "cpp"
+		}
+	}
+}

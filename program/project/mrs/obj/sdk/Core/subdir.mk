@@ -1,0 +1,29 @@
+################################################################################
+# MRS Version: 2.5.0
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+c:/Users/32656/Desktop/car(1)/car/program/libraries/sdk/Core/core_riscv.c 
+
+C_DEPS += \
+./sdk/Core/core_riscv.d 
+
+OBJS += \
+./sdk/Core/core_riscv.o 
+
+DIR_OBJS += \
+./sdk/Core/*.o \
+
+DIR_DEPS += \
+./sdk/Core/*.d \
+
+DIR_EXPANDS += \
+./sdk/Core/*.234r.expand \
+
+
+# Each subdirectory must supply rules for building sources it contributes
+sdk/Core/core_riscv.o: c:/Users/32656/Desktop/car(1)/car/program/libraries/sdk/Core/core_riscv.c
+	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -fmax-errors=20 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall -g -I"c:/Users/32656/Desktop/car(1)/car/program/Libraries/doc" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_components" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/sdk/Core" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/sdk/Ld" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/sdk/Peripheral" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/sdk/Startup" -I"c:/Users/32656/Desktop/car(1)/car/program/project/user/inc" -I"c:/Users/32656/Desktop/car(1)/car/program/project/user/inc/app" -I"c:/Users/32656/Desktop/car(1)/car/program/project/user/inc/bsp" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_common" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_device" -I"c:/Users/32656/Desktop/car(1)/car/program/project/code" -I"c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+

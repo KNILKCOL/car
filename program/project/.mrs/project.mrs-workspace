@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "project",
+			"path": "c:\\Users\\32656\\Desktop\\car\\car\\program\\project"
+		}
+	],
+	"settings": {
+		"mrs.workspace.type": "folder",
+		"mrs.init.arg": "",
+		"files.associations": {
+			"*.c": "c",
+			"*.h": "cpp",
+			"*.hxx": "cpp",
+			"*.hpp": "cpp",
+			"*.c++": "cpp",
+			"*.cpp": "cpp",
+			"*.cxx": "cpp",
+			"*.cc": "cpp",
+			"*.hh": "cpp",
+			"*.h++": "cpp"
+		}
+	}
+}
