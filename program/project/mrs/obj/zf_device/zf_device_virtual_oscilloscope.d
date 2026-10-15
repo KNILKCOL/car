@@ -1,8 +1,8 @@
 zf_device/zf_device_virtual_oscilloscope.o: \
- c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_device/zf_device_virtual_oscilloscope.c \
- c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_device/zf_device_virtual_oscilloscope.h \
- c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_common/zf_common_typedef.h
+ c:/Users/32656/Desktop/car/car/program/libraries/zf_device/zf_device_virtual_oscilloscope.c \
+ c:/Users/32656/Desktop/car/car/program/libraries/zf_device/zf_device_virtual_oscilloscope.h \
+ c:/Users/32656/Desktop/car/car/program/libraries/zf_common/zf_common_typedef.h
 
-c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_device/zf_device_virtual_oscilloscope.h:
+c:/Users/32656/Desktop/car/car/program/libraries/zf_device/zf_device_virtual_oscilloscope.h:
 
-c:/Users/32656/Desktop/car(1)/car/program/libraries/zf_common/zf_common_typedef.h:
+c:/Users/32656/Desktop/car/car/program/libraries/zf_common/zf_common_typedef.h:

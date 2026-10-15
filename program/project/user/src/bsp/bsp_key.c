@@ -112,12 +112,12 @@ bsp_key_enum bsp_key_code_to_key (uint8 code)
     switch(code)
     {
         case BSP_KEY_CODE_KEY1:  return BSP_KEY_KEY1;
-        case BSP_KEY_CODE_KEY2:  return BSP_KEY_KEY2;
-        case BSP_KEY_CODE_MID:   return BSP_KEY_MID;
-        case BSP_KEY_CODE_RIGHT: return BSP_KEY_RIGHT;
-        case BSP_KEY_CODE_UP:    return BSP_KEY_UP;
-        case BSP_KEY_CODE_DOWN:  return BSP_KEY_DOWN;
-        case BSP_KEY_CODE_LEFT:  return BSP_KEY_LEFT;
+        case BSP_KEY_CODE_KEY2:  return BSP_KEY_MID;
+        case BSP_KEY_CODE_MID:   return BSP_KEY_LEFT;
+        case BSP_KEY_CODE_RIGHT: return BSP_KEY_KEY2;
+        case BSP_KEY_CODE_UP:    return BSP_KEY_DOWN;
+        case BSP_KEY_CODE_DOWN:  return BSP_KEY_UP;
+        case BSP_KEY_CODE_LEFT:  return BSP_KEY_RIGHT;
         default:                 return BSP_KEY_NONE;
     }
 }
