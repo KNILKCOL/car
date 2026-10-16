@@ -36,8 +36,8 @@
 #define BSP_LED1_PIN                    (A11)                                   // LIGHT1_A11  右侧 LED（任务3使用）
 #define BSP_LED2_PIN                    (A12)                                   // LIGHT2_A12
 #define BSP_LED3_PIN                    (A15)                                   // LIGHT3_A15
-#define BSP_LED4_PIN                    (C10)                                   // LIGHT4_C10
-#define BSP_LED5_PIN                    (D1)                                    // LIGHT5_D1
+#define BSP_LED4_PIN                    (D1)                                   // LIGHT4_C10
+#define BSP_LED5_PIN                    (C10)                                    // LIGHT5_D1
 
 #define BSP_LED_RIGHT_INDEX             (1)                                     // 任务3 "右侧 LED" 在 LED 组中的编号
 #define BSP_LED_DEFAULT_INDEX           (1)                                     // 默认演示 LED 编号（任务6 定时中断默认翻转的 LED）
