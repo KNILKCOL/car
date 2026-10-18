@@ -1,22 +1,20 @@
 /*********************************************************************************************************************
 * 文件名称          bsp_led.c
 * 功能简介          LED 指示灯 BSP 驱动（任务3 / 任务6）
-* 硬件连接          LIGHT1_A11 / LIGHT2_A12 / LIGHT3_A15 / LIGHT4_C10 / LIGHT5_D1
+* 硬件连接          LIGHT1_A11 / LIGHT2_A12 / LIGHT3_A15 / LIGHT4_D1
 ********************************************************************************************************************/
 #include "bsp_led.h"
 
 // LED 引脚表（顺序对应 bsp_led_on(1) ~ bsp_led_on(BSP_LED_NUM)）
 static const gpio_pin_enum bsp_led_pin_table[BSP_LED_NUM] =
 {
-    BSP_LED1_PIN,
-    BSP_LED2_PIN,
-    BSP_LED3_PIN,
-    BSP_LED4_PIN,
-    BSP_LED5_PIN,
+    BSP_LED1_PIN,   // A11
+    BSP_LED2_PIN,   // A12
+    BSP_LED3_PIN,   // A15
+    BSP_LED4_PIN,   // D1
 };
 
-// 记录当前状态，便于 bsp_led_get / bsp_led_toggle
-static uint8 bsp_led_state[BSP_LED_NUM] = {0, 0, 0, 0, 0};
+static uint8 bsp_led_state[BSP_LED_NUM] = {0};
 
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     LED 初始化

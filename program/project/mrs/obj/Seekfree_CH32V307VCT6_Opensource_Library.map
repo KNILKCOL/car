@@ -5103,74 +5103,75 @@ END GROUP
  .rodata.bsp_key_code_to_key
                 0x0000000000013a90       0x1c ./user_c/bsp/bsp_key.o
  .rodata.bsp_led_pin_table
-                0x0000000000013aac       0x14 ./user_c/bsp/bsp_led.o
+                0x0000000000013aac       0x10 ./user_c/bsp/bsp_led.o
  .rodata.app_menu_page
-                0x0000000000013ac0       0x14 ./user_c/app/app_menu.o
-                0x0000000000013ac0                app_menu_page
+                0x0000000000013abc       0x14 ./user_c/app/app_menu.o
+                0x0000000000013abc                app_menu_page
  .rodata.task_led_key
-                0x0000000000013ad4       0x1c ./user_c/app/app_task.o
+                0x0000000000013ad0       0x1c ./user_c/app/app_task.o
  .rodata.app_task_page_led
-                0x0000000000013af0       0x14 ./user_c/app/app_task.o
-                0x0000000000013af0                app_task_page_led
+                0x0000000000013aec       0x14 ./user_c/app/app_task.o
+                0x0000000000013aec                app_task_page_led
  .rodata.app_task_page_key
-                0x0000000000013b04       0x14 ./user_c/app/app_task.o
-                0x0000000000013b04                app_task_page_key
+                0x0000000000013b00       0x14 ./user_c/app/app_task.o
+                0x0000000000013b00                app_task_page_key
  .rodata.task_pwm_key
-                0x0000000000013b18       0x20 ./user_c/app/app_task.o
+                0x0000000000013b14       0x20 ./user_c/app/app_task.o
  .rodata.app_task_page_pwm
-                0x0000000000013b38       0x14 ./user_c/app/app_task.o
-                0x0000000000013b38                app_task_page_pwm
+                0x0000000000013b34       0x14 ./user_c/app/app_task.o
+                0x0000000000013b34                app_task_page_pwm
  .rodata.task_timer_key
-                0x0000000000013b4c       0x1c ./user_c/app/app_task.o
+                0x0000000000013b48       0x1c ./user_c/app/app_task.o
  .rodata.app_task_page_timer
-                0x0000000000013b68       0x14 ./user_c/app/app_task.o
-                0x0000000000013b68                app_task_page_timer
+                0x0000000000013b64       0x14 ./user_c/app/app_task.o
+                0x0000000000013b64                app_task_page_timer
  .rodata.app_task_page_lcd
-                0x0000000000013b7c       0x14 ./user_c/app/app_task.o
-                0x0000000000013b7c                app_task_page_lcd
+                0x0000000000013b78       0x14 ./user_c/app/app_task.o
+                0x0000000000013b78                app_task_page_lcd
  .rodata.app_task_page_flash
-                0x0000000000013b90       0x14 ./user_c/app/app_task.o
-                0x0000000000013b90                app_task_page_flash
+                0x0000000000013b8c       0x14 ./user_c/app/app_task.o
+                0x0000000000013b8c                app_task_page_flash
  .rodata.task_exti_key
-                0x0000000000013ba4       0x20 ./user_c/app/app_task.o
+                0x0000000000013ba0       0x20 ./user_c/app/app_task.o
  .rodata.app_task_page_exti
-                0x0000000000013bc4       0x14 ./user_c/app/app_task.o
-                0x0000000000013bc4                app_task_page_exti
+                0x0000000000013bc0       0x14 ./user_c/app/app_task.o
+                0x0000000000013bc0                app_task_page_exti
  .rodata.MyDevDescrHD
-                0x0000000000013bd8       0x12 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013bd8                MyDevDescrHD
- *fill*         0x0000000000013bea        0x2 
+                0x0000000000013bd4       0x12 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013bd4                MyDevDescrHD
+ *fill*         0x0000000000013be6        0x2 
  .rodata.MyCfgDescrHD
-                0x0000000000013bec       0x43 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013bec                MyCfgDescrHD
- *fill*         0x0000000000013c2f        0x1 
+                0x0000000000013be8       0x43 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013be8                MyCfgDescrHD
+ *fill*         0x0000000000013c2b        0x1 
  .rodata.MyReportDescHD
-                0x0000000000013c30       0x14 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013c30                MyReportDescHD
+                0x0000000000013c2c       0x14 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013c2c                MyReportDescHD
  .rodata.MyManuInfoHD
-                0x0000000000013c44        0xe ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013c44                MyManuInfoHD
- *fill*         0x0000000000013c52        0x2 
+                0x0000000000013c40        0xe ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013c40                MyManuInfoHD
+ *fill*         0x0000000000013c4e        0x2 
  .rodata.MyProdInfoHD
-                0x0000000000013c54        0xc ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013c54                MyProdInfoHD
+                0x0000000000013c50        0xc ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013c50                MyProdInfoHD
  .rodata.MySerNumInfoHD
-                0x0000000000013c60       0x16 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013c60                MySerNumInfoHD
- *fill*         0x0000000000013c76        0x2 
+                0x0000000000013c5c       0x16 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013c5c                MySerNumInfoHD
+ *fill*         0x0000000000013c72        0x2 
  .rodata.MyUSBQUADescHD
-                0x0000000000013c78        0xa ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000000013c78                MyUSBQUADescHD
- *fill*         0x0000000000013c82        0x2 
+                0x0000000000013c74        0xa ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013c74                MyUSBQUADescHD
+ *fill*         0x0000000000013c7e        0x2 
  .rodata.OTG_FS_IRQHandler
-                0x0000000000013c84       0xbc ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x0000000000013c80       0xbc ./sdk/Peripheral/ch32v30x_usbotg_device.o
  .rodata.__divdf3
-                0x0000000000013d40       0x40 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imafc/ilp32f\libgcc.a(divdf3.o)
+                0x0000000000013d3c       0x40 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imafc/ilp32f\libgcc.a(divdf3.o)
  .rodata.__muldf3
-                0x0000000000013d80       0x40 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imafc/ilp32f\libgcc.a(muldf3.o)
+                0x0000000000013d7c       0x40 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imafc/ilp32f\libgcc.a(muldf3.o)
  .rodata.__clz_tab
-                0x0000000000013dc0      0x100 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imafc/ilp32f\libgcc.a(_clz.o)
-                0x0000000000013dc0                __clz_tab
+                0x0000000000013dbc      0x100 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imafc/ilp32f\libgcc.a(_clz.o)
+                0x0000000000013dbc                __clz_tab
+ *fill*         0x0000000000013ebc        0x4 
  .rodata._printf_float.cst8
                 0x0000000000013ec0        0x8 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-nano-vfprintf_float.o)
  .rodata._printf_float.str1.4
@@ -5442,7 +5443,7 @@ END GROUP
                 0x0000000020000440                . = ALIGN (0x4)
                 0x0000000020000440                PROVIDE (_edata = .)
 
-.bss            0x0000000020000440      0x7b0 load address 0x00000000000145e4
+.bss            0x0000000020000440      0x7ac load address 0x00000000000145e4
                 0x0000000020000440                . = ALIGN (0x4)
                 0x0000000020000440                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -5506,138 +5507,137 @@ END GROUP
                 0x000000002000048e        0x1 ./user_c/bsp/bsp_key.o
  *fill*         0x000000002000048f        0x1 
  .sbss.bsp_led_state
-                0x0000000020000490        0x5 ./user_c/bsp/bsp_led.o
- *fill*         0x0000000020000495        0x3 
+                0x0000000020000490        0x4 ./user_c/bsp/bsp_led.o
  .sbss.bsp_pit_tick_ms
-                0x0000000020000498        0x4 ./user_c/bsp/bsp_pit.o
+                0x0000000020000494        0x4 ./user_c/bsp/bsp_pit.o
  .sbss.bsp_pit_led_count
-                0x000000002000049c        0x4 ./user_c/bsp/bsp_pit.o
+                0x0000000020000498        0x4 ./user_c/bsp/bsp_pit.o
  .sbss.bsp_buzzer_on_flag
-                0x00000000200004a0        0x1 ./user_c/bsp/bsp_pwm.o
- *fill*         0x00000000200004a1        0x1 
+                0x000000002000049c        0x1 ./user_c/bsp/bsp_pwm.o
+ *fill*         0x000000002000049d        0x1 
  .sbss.bsp_buzzer_left_ms
-                0x00000000200004a2        0x2 ./user_c/bsp/bsp_pwm.o
+                0x000000002000049e        0x2 ./user_c/bsp/bsp_pwm.o
  .sbss.app_main_page
-                0x00000000200004a4        0x4 ./user_c/app/app_main.o
+                0x00000000200004a0        0x4 ./user_c/app/app_main.o
  .sbss.app_main_menu_sel
-                0x00000000200004a8        0x1 ./user_c/app/app_main.o
- *fill*         0x00000000200004a9        0x3 
+                0x00000000200004a4        0x1 ./user_c/app/app_main.o
+ *fill*         0x00000000200004a5        0x3 
  .sbss.app_main_last_refresh
-                0x00000000200004ac        0x4 ./user_c/app/app_main.o
+                0x00000000200004a8        0x4 ./user_c/app/app_main.o
  .sbss.app_menu_level
-                0x00000000200004b0        0x4 ./user_c/app/app_menu.o
+                0x00000000200004ac        0x4 ./user_c/app/app_menu.o
  .sbss.app_menu_group
-                0x00000000200004b4        0x1 ./user_c/app/app_menu.o
+                0x00000000200004b0        0x1 ./user_c/app/app_menu.o
  .sbss.app_menu_item
-                0x00000000200004b5        0x1 ./user_c/app/app_menu.o
- *fill*         0x00000000200004b6        0x2 
+                0x00000000200004b1        0x1 ./user_c/app/app_menu.o
+ *fill*         0x00000000200004b2        0x2 
  .sbss.app_menu_edit_backup
-                0x00000000200004b8        0x4 ./user_c/app/app_menu.o
+                0x00000000200004b4        0x4 ./user_c/app/app_menu.o
  .sbss.app_param_prev_boot
-                0x00000000200004bc        0x4 ./user_c/app/app_param.o
+                0x00000000200004b8        0x4 ./user_c/app/app_param.o
  .sbss.app_param_last_result
-                0x00000000200004c0        0x1 ./user_c/app/app_param.o
+                0x00000000200004bc        0x1 ./user_c/app/app_param.o
  .sbss.task_led_blink
-                0x00000000200004c1        0x1 ./user_c/app/app_task.o
- *fill*         0x00000000200004c2        0x2 
+                0x00000000200004bd        0x1 ./user_c/app/app_task.o
+ *fill*         0x00000000200004be        0x2 
  .sbss.task_led_last_ms
-                0x00000000200004c4        0x4 ./user_c/app/app_task.o
+                0x00000000200004c0        0x4 ./user_c/app/app_task.o
  .sbss.task_key_last_event_ms
-                0x00000000200004c8        0x4 ./user_c/app/app_task.o
+                0x00000000200004c4        0x4 ./user_c/app/app_task.o
  .sbss.task_key_last_key
-                0x00000000200004cc        0x4 ./user_c/app/app_task.o
+                0x00000000200004c8        0x4 ./user_c/app/app_task.o
  .sbss.task_key_last_state
-                0x00000000200004d0        0x4 ./user_c/app/app_task.o
+                0x00000000200004cc        0x4 ./user_c/app/app_task.o
  .sbss.task_pwm_sweep_ms
-                0x00000000200004d4        0x4 ./user_c/app/app_task.o
+                0x00000000200004d0        0x4 ./user_c/app/app_task.o
  .sbss.task_lcd_run_count
-                0x00000000200004d8        0x4 ./user_c/app/app_task.o
+                0x00000000200004d4        0x4 ./user_c/app/app_task.o
  .sbss.task_flash_last_op
-                0x00000000200004dc        0x1 ./user_c/app/app_task.o
- *fill*         0x00000000200004dd        0x3 
+                0x00000000200004d8        0x1 ./user_c/app/app_task.o
+ *fill*         0x00000000200004d9        0x3 
  .sbss.task_exti_counter
-                0x00000000200004e0        0x4 ./user_c/app/app_task.o
+                0x00000000200004dc        0x4 ./user_c/app/app_task.o
  .sbss.EP0_DatabufHD
-                0x00000000200004e4        0x8 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004e4                EP0_DatabufHD
+                0x00000000200004e0        0x8 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004e0                EP0_DatabufHD
  .sbss.pEP0_RAM_Addr
-                0x00000000200004ec        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004ec                pEP0_RAM_Addr
+                0x00000000200004e8        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004e8                pEP0_RAM_Addr
  .sbss.pEP1_RAM_Addr
-                0x00000000200004f0        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004f0                pEP1_RAM_Addr
+                0x00000000200004ec        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004ec                pEP1_RAM_Addr
  .sbss.pEP2_RAM_Addr
-                0x00000000200004f4        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004f4                pEP2_RAM_Addr
- .sbss.pDescr   0x00000000200004f8        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004f8                pDescr
+                0x00000000200004f0        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004f0                pEP2_RAM_Addr
+ .sbss.pDescr   0x00000000200004f4        0x4 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004f4                pDescr
  .sbss.USBHD_Dev_SetupReqLen
-                0x00000000200004fc        0x2 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004fc                USBHD_Dev_SetupReqLen
+                0x00000000200004f8        0x2 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004f8                USBHD_Dev_SetupReqLen
  .sbss.USBHD_Dev_SleepStatus
-                0x00000000200004fe        0x1 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004fe                USBHD_Dev_SleepStatus
+                0x00000000200004fa        0x1 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004fa                USBHD_Dev_SleepStatus
  .sbss.DevConfig
-                0x00000000200004ff        0x1 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x00000000200004ff                DevConfig
+                0x00000000200004fb        0x1 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004fb                DevConfig
  .sbss.SetupReqCode
-                0x0000000020000500        0x1 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000020000500                SetupReqCode
- *fill*         0x0000000020000501        0x1 
+                0x00000000200004fc        0x1 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004fc                SetupReqCode
+ *fill*         0x00000000200004fd        0x1 
  .sbss.SetupReqLen
-                0x0000000020000502        0x2 ./sdk/Peripheral/ch32v30x_usbotg_device.o
-                0x0000000020000502                SetupReqLen
+                0x00000000200004fe        0x2 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+                0x00000000200004fe                SetupReqLen
  .sbss.__malloc_free_list
-                0x0000000020000504        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000504                __malloc_free_list
+                0x0000000020000500        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000500                __malloc_free_list
  .sbss.__malloc_sbrk_start
-                0x0000000020000508        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000508                __malloc_sbrk_start
+                0x0000000020000504        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000504                __malloc_sbrk_start
  .sbss.heap_end.1520
-                0x000000002000050c        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libnosys.a(sbrk.o)
+                0x0000000020000508        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libnosys.a(sbrk.o)
  *(.gnu.linkonce.sb.*)
  *(.bss*)
  .bss.flash_union_buffer
-                0x0000000020000510      0x400 ./zf_driver/zf_driver_flash.o
-                0x0000000020000510                flash_union_buffer
+                0x000000002000050c      0x400 ./zf_driver/zf_driver_flash.o
+                0x000000002000050c                flash_union_buffer
  .bss.timer_function_state
-                0x0000000020000910       0x28 ./zf_driver/zf_driver_timer.o
+                0x000000002000090c       0x28 ./zf_driver/zf_driver_timer.o
  .bss.timer_mode_state
-                0x0000000020000938       0x28 ./zf_driver/zf_driver_timer.o
+                0x0000000020000934       0x28 ./zf_driver/zf_driver_timer.o
  .bss.gnss_receiver_fifo
-                0x0000000020000960       0x19 ./zf_device/zf_device_gnss.o
- *fill*         0x0000000020000979        0x3 
+                0x000000002000095c       0x19 ./zf_device/zf_device_gnss.o
+ *fill*         0x0000000020000975        0x3 
  .bss.gps_gga_buffer
-                0x000000002000097c       0x80 ./zf_device/zf_device_gnss.o
+                0x0000000020000978       0x80 ./zf_device/zf_device_gnss.o
  .bss.gps_rmc_buffer
-                0x00000000200009fc       0x80 ./zf_device/zf_device_gnss.o
+                0x00000000200009f8       0x80 ./zf_device/zf_device_gnss.o
  .bss.gps_ths_buffer
-                0x0000000020000a7c       0x80 ./zf_device/zf_device_gnss.o
+                0x0000000020000a78       0x80 ./zf_device/zf_device_gnss.o
  .bss.debug_uart_buffer
-                0x0000000020000afc       0x40 ./zf_common/zf_common_debug.o
-                0x0000000020000afc                debug_uart_buffer
+                0x0000000020000af8       0x40 ./zf_common/zf_common_debug.o
+                0x0000000020000af8                debug_uart_buffer
  .bss.debug_uart_fifo
-                0x0000000020000b3c       0x19 ./zf_common/zf_common_debug.o
-                0x0000000020000b3c                debug_uart_fifo
- *fill*         0x0000000020000b55        0x3 
+                0x0000000020000b38       0x19 ./zf_common/zf_common_debug.o
+                0x0000000020000b38                debug_uart_fifo
+ *fill*         0x0000000020000b51        0x3 
  .bss.debug_output_info
-                0x0000000020000b58       0x14 ./zf_common/zf_common_debug.o
+                0x0000000020000b54       0x14 ./zf_common/zf_common_debug.o
  .bss.bsp_key_event_state
-                0x0000000020000b6c       0x20 ./user_c/bsp/bsp_key.o
+                0x0000000020000b68       0x20 ./user_c/bsp/bsp_key.o
  .bss.bsp_key_event_val
-                0x0000000020000b8c       0x20 ./user_c/bsp/bsp_key.o
+                0x0000000020000b88       0x20 ./user_c/bsp/bsp_key.o
  .bss.app_param_store
-                0x0000000020000bac       0x28 ./user_c/app/app_param.o
+                0x0000000020000ba8       0x28 ./user_c/app/app_param.o
  .bss.app_task_buf
-                0x0000000020000bd4       0x18 ./user_c/app/app_task.o
+                0x0000000020000bd0       0x18 ./user_c/app/app_task.o
  *(.gnu.linkonce.b.*)
  *(COMMON*)
- COMMON         0x0000000020000bec        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-reent.o)
-                0x0000000020000bec                errno
-                0x0000000020000bf0                . = ALIGN (0x4)
-                0x0000000020000bf0                PROVIDE (_ebss = .)
+ COMMON         0x0000000020000be8        0x4 d:/mounriver/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imafc/ilp32f\libg_nano.a(lib_a-reent.o)
+                0x0000000020000be8                errno
+                0x0000000020000bec                . = ALIGN (0x4)
+                0x0000000020000bec                PROVIDE (_ebss = .)
                 [!provide]                        PROVIDE (_end = _ebss)
-                0x0000000020000bf0                PROVIDE (end = .)
+                0x0000000020000bec                PROVIDE (end = .)
 
 .stack          0x000000002000f440      0x800
                 [!provide]                        PROVIDE (_heap_end = .)
@@ -5648,7 +5648,7 @@ END GROUP
                 0x000000002000fc40                PROVIDE (_eusrstack = .)
 OUTPUT(Seekfree_CH32V307VCT6_Opensource_Library.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000    0x30e98
+.debug_info     0x0000000000000000    0x30e88
  .debug_info    0x0000000000000000      0xa28 ./zf_driver/zf_driver_delay.o
  .debug_info    0x0000000000000a28     0x1061 ./zf_driver/zf_driver_exti.o
  .debug_info    0x0000000000001a89      0xd7b ./zf_driver/zf_driver_flash.o
@@ -5671,26 +5671,26 @@ OUTPUT(Seekfree_CH32V307VCT6_Opensource_Library.elf elf32-littleriscv)
  .debug_info    0x0000000000013fe4     0x1859 ./user_c/bsp/bsp_flash.o
  .debug_info    0x000000000001583d     0x1b3a ./user_c/bsp/bsp_key.o
  .debug_info    0x0000000000017377     0x1a08 ./user_c/bsp/bsp_lcd.o
- .debug_info    0x0000000000018d7f     0x191d ./user_c/bsp/bsp_led.o
- .debug_info    0x000000000001a69c     0x1b34 ./user_c/bsp/bsp_pit.o
- .debug_info    0x000000000001c1d0     0x1b24 ./user_c/bsp/bsp_pwm.o
- .debug_info    0x000000000001dcf4     0x1640 ./user_c/bsp/bsp_system.o
- .debug_info    0x000000000001f334     0x19f0 ./user_c/app/app_main.o
- .debug_info    0x0000000000020d24     0x1a19 ./user_c/app/app_menu.o
- .debug_info    0x000000000002273d     0x1a71 ./user_c/app/app_param.o
- .debug_info    0x00000000000241ae     0x1e60 ./user_c/app/app_task.o
- .debug_info    0x000000000002600e     0x183f ./user_c/app/app_ui.o
- .debug_info    0x000000000002784d     0x1b82 ./user_c/isr.o
- .debug_info    0x00000000000293cf     0x1520 ./user_c/main.o
- .debug_info    0x000000000002a8ef       0x22 ./sdk/Startup/startup_ch32v30x_D8C.o
- .debug_info    0x000000000002a911      0x353 ./sdk/Peripheral/ch32v30x_exti.o
- .debug_info    0x000000000002ac64      0x973 ./sdk/Peripheral/ch32v30x_flash.o
- .debug_info    0x000000000002b5d7      0x712 ./sdk/Peripheral/ch32v30x_gpio.o
- .debug_info    0x000000000002bce9      0xc64 ./sdk/Peripheral/ch32v30x_rcc.o
- .debug_info    0x000000000002c94d      0x96e ./sdk/Peripheral/ch32v30x_spi.o
- .debug_info    0x000000000002d2bb     0x1dd2 ./sdk/Peripheral/ch32v30x_tim.o
- .debug_info    0x000000000002f08d      0xa45 ./sdk/Peripheral/ch32v30x_usart.o
- .debug_info    0x000000000002fad2     0x13c6 ./sdk/Peripheral/ch32v30x_usbotg_device.o
+ .debug_info    0x0000000000018d7f     0x190d ./user_c/bsp/bsp_led.o
+ .debug_info    0x000000000001a68c     0x1b34 ./user_c/bsp/bsp_pit.o
+ .debug_info    0x000000000001c1c0     0x1b24 ./user_c/bsp/bsp_pwm.o
+ .debug_info    0x000000000001dce4     0x1640 ./user_c/bsp/bsp_system.o
+ .debug_info    0x000000000001f324     0x19f0 ./user_c/app/app_main.o
+ .debug_info    0x0000000000020d14     0x1a19 ./user_c/app/app_menu.o
+ .debug_info    0x000000000002272d     0x1a71 ./user_c/app/app_param.o
+ .debug_info    0x000000000002419e     0x1e60 ./user_c/app/app_task.o
+ .debug_info    0x0000000000025ffe     0x183f ./user_c/app/app_ui.o
+ .debug_info    0x000000000002783d     0x1b82 ./user_c/isr.o
+ .debug_info    0x00000000000293bf     0x1520 ./user_c/main.o
+ .debug_info    0x000000000002a8df       0x22 ./sdk/Startup/startup_ch32v30x_D8C.o
+ .debug_info    0x000000000002a901      0x353 ./sdk/Peripheral/ch32v30x_exti.o
+ .debug_info    0x000000000002ac54      0x973 ./sdk/Peripheral/ch32v30x_flash.o
+ .debug_info    0x000000000002b5c7      0x712 ./sdk/Peripheral/ch32v30x_gpio.o
+ .debug_info    0x000000000002bcd9      0xc64 ./sdk/Peripheral/ch32v30x_rcc.o
+ .debug_info    0x000000000002c93d      0x96e ./sdk/Peripheral/ch32v30x_spi.o
+ .debug_info    0x000000000002d2ab     0x1dd2 ./sdk/Peripheral/ch32v30x_tim.o
+ .debug_info    0x000000000002f07d      0xa45 ./sdk/Peripheral/ch32v30x_usart.o
+ .debug_info    0x000000000002fac2     0x13c6 ./sdk/Peripheral/ch32v30x_usbotg_device.o
 
 .debug_abbrev   0x0000000000000000     0x66a8
  .debug_abbrev  0x0000000000000000      0x212 ./zf_driver/zf_driver_delay.o
