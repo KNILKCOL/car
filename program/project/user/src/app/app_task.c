@@ -92,23 +92,27 @@ static void task_led_draw (void)
 //-------------------------------------------------------------------------------------------------------------------
 static void task_led_update (void)
 {
-    if(0 == task_led_blink)
+    uint8 i; 
+     if(0 == task_led_blink)
     {
         return;
     }
 
-    // 用系统节拍做的软件定时闪烁（与任务6 的"定时器中断控制"形成对比）
     if(bsp_pit_check_interval(&task_led_last_ms, BSP_LED_BLINK_PERIOD_MS))
     {
-        bsp_led_toggle(task_led_sel);
-
-        sprintf(app_task_buf, "LED%d", task_led_sel);
-        app_ui_menu_item(task_led_sel, app_task_buf,
-                         bsp_led_get(task_led_sel) ? ("ON ") : ("OFF"),
-                         (task_led_sel == task_led_sel) ? (1) : (0));
+        for(i = 1; i <= BSP_LED_NUM; i++)
+        {
+            bsp_led_toggle(i);
+        }
+        for(i = 1; i <= BSP_LED_NUM; i++)
+        {
+            sprintf(app_task_buf, "LED%d", i);
+            app_ui_menu_item(i, app_task_buf,
+                             bsp_led_get(i) ? ("ON ") : ("OFF"),
+                             (i == task_led_sel) ? (1) : (0));
+        }
     }
 }
-
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     任务3 页面：按键处理
 // 返回参数     void
@@ -440,7 +444,7 @@ static void task_pwm_key (bsp_key_enum key, bsp_key_state_enum state)
         {
             bsp_buzzer_off();
             app_main_goto_main();
-            break;
+            return;
         }
         default:
         {
@@ -470,6 +474,8 @@ static uint8  task_timer_led    = 1;
 //-------------------------------------------------------------------------------------------------------------------
 static void task_timer_init (void)
 {
+    bsp_led_all_off();  // ★ 新增：进页面时先全灭，防止别的页面留下的灯亮着
+
     task_timer_enable = 1;
     task_timer_led    = BSP_LED_DEFAULT_INDEX;
 
@@ -534,6 +540,8 @@ static void task_timer_key (bsp_key_enum key, bsp_key_state_enum state)
         }
         case BSP_KEY_KEY2:
         {
+            bsp_led_all_off();  // ★ 新增：切换目标灯之前，先全灭，防止旧灯卡在“亮”的状态
+
             task_timer_led++;
             if(task_timer_led > BSP_LED_NUM)
             {
@@ -561,15 +569,12 @@ static void task_timer_key (bsp_key_enum key, bsp_key_state_enum state)
             }
             break;
         }
-        case BSP_KEY_KEY1:
+                case BSP_KEY_KEY1:
         {
             bsp_pit_led_enable(0);                                              // 离开页面时关闭，避免影响其它任务显示
+            bsp_led_all_off();          // ★ 新增：离开页面时把所有灯关掉
             app_main_goto_main();
-            break;
-        }
-        default:
-        {
-            break;
+            return;  // ★ 改成 return，直接退出函数，千万不要执行下面的 task_timer_draw
         }
     }
 
@@ -580,7 +585,6 @@ const app_page_struct app_task_page_timer =
 {
     PAGE_TIMER_NAME, task_timer_init, task_timer_draw, task_timer_update, task_timer_key
 };
-
 /*********************************************************************************************************************
 *                                       任务7：SPI 驱动屏幕
 ********************************************************************************************************************/
