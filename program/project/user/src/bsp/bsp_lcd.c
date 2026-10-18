@@ -156,10 +156,11 @@ void bsp_lcd_draw_test_pattern (void)
 
     bsp_lcd_clear(RGB565_BLACK);
     tft180_set_color(RGB565_BLACK, RGB565_WHITE);
-    tft180_draw_line(0, 0, BSP_LCD_W - 1, 0, RGB565_RED);
-    tft180_draw_line(0, 0, 0, BSP_LCD_H - 1, RGB565_GREEN);
-    tft180_draw_line(0, BSP_LCD_H - 1, BSP_LCD_W - 1, BSP_LCD_H - 1, RGB565_BLUE);
-    tft180_draw_line(BSP_LCD_W - 1, 0, BSP_LCD_W - 1, BSP_LCD_H - 1, RGB565_YELLOW);
+    tft180_draw_line(0, 0, BSP_LCD_W - 4, 0, RGB565_RED);
+    tft180_draw_line(0, 0, 0, BSP_LCD_H - 4, RGB565_GREEN);
+    tft180_draw_line(0, BSP_LCD_H - 4, BSP_LCD_W - 4, BSP_LCD_H - 4, RGB565_BLUE);
+    tft180_draw_line(BSP_LCD_W - 4, 0, BSP_LCD_W - 4, BSP_LCD_H - 4, RGB565_YELLOW);
+    system_delay_ms(250);
 }
 
 //-------------------------------------------------------------------------------------------------------------------
