@@ -429,14 +429,18 @@ static void task_pwm_key (bsp_key_enum key, bsp_key_state_enum state)
             }
             break;
         }
-        case BSP_KEY_KEY2:
+               case BSP_KEY_KEY2:
         {
-            // 用蜂鸣器播放一段"无源蜂鸣器换频率"的效果，验证频率可调
-            bsp_buzzer_set_freq(1046);  bsp_buzzer_on();  system_delay_ms(150);
-            bsp_buzzer_set_freq(1318);  system_delay_ms(150);
-            bsp_buzzer_set_freq(1568);  system_delay_ms(150);
-            bsp_buzzer_set_freq(2093);  system_delay_ms(200);
-            bsp_buzzer_off();
+            bsp_buzzer_set_freq(523);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            bsp_buzzer_set_freq(587);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            bsp_buzzer_set_freq(659);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            bsp_buzzer_set_freq(698);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            bsp_buzzer_set_freq(784);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            bsp_buzzer_set_freq(880);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            bsp_buzzer_set_freq(988);  bsp_buzzer_on(); system_delay_ms(200); bsp_buzzer_off(); system_delay_ms(50);
+            
+            bsp_buzzer_set_freq(1046); bsp_buzzer_on(); system_delay_ms(400); bsp_buzzer_off(); 
+            
             bsp_buzzer_set_freq(task_pwm_freq);
             break;
         }
