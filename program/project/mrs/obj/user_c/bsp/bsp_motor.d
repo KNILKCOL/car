@@ -1,7 +1,6 @@
-user_c/bsp/bsp_pwm.o: \
- c:/Users/32656/Desktop/car/car/program/project/user/src/bsp/bsp_pwm.c \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h \
+user_c/bsp/bsp_motor.o: \
+ c:/Users/32656/Desktop/car/car/program/project/user/src/bsp/bsp_motor.c \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_common/zf_common_headfile.h \
  c:/Users/32656/Desktop/car/car/program/libraries/sdk/Peripheral/ch32v30x_adc.h \
  c:/Users/32656/Desktop/car/car/program/libraries/sdk/Peripheral/ch32v30x.h \
@@ -85,9 +84,7 @@ user_c/bsp/bsp_pwm.o: \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_components/seekfree_assistant.h \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_components/seekfree_assistant_interface.h
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h:
-
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h:
 
 c:/Users/32656/Desktop/car/car/program/libraries/zf_common/zf_common_headfile.h:
 

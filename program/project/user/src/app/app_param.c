@@ -7,34 +7,35 @@
 #include "bsp_pit.h"
 #include "bsp_key.h"
 #include "bsp_lcd.h"
+#include "app_pid.h"
+#include "bsp_motor.h"
 
 // 参数表：3 组 x 3 个
-static app_param_group_struct app_param_table[APP_PARAM_GROUP_NUM] =
-{
+static app_param_group_struct app_param_table[APP_PARAM_GROUP_NUM] = {
     {
-        "MOTOR",
+        "PID_TURN",
         {
-            { "SPEED",    0, 100,  1,  50,  50 },                               // 目标速度(%)
-            { "DUTY",     0, 100,  1,  60,  60 },                               // 最大占空比(%)
-            { "ACC",      1,  50,  1,  10,  10 },                               // 加速度
+            { "KP",   0, 100, 1, 15, 15 }, 
+            { "KI",   0, 50,  1, 0,  0  }, 
+            { "KD",   0, 100, 1, 10, 10 }, 
         }
     },
     {
-        "DISPLAY",
+        "CAR_CFG",
         {
-            { "BRIGHT",   0, 100,  5,  80,  80 },                               // 屏幕背光(0=关闭, >0=开启)
-            { "REFRESH", 10, 200, 10, 100, 100 },                                // UI 刷新周期(ms)
-            { "LEDBLINK",50,1000, 50, 500, 500 },                                // 定时器中断 LED 翻转周期(ms)
+            { "SPEED", 0, 100, 5, 40, 40 },  // 基础速度
+            { "FREQ",  5, 20,  5, 10, 10 },  // PWM频率(kHz)
+            { "VISION",0, 1,   1, 0,  0  },  // 0灰度 1摄像头
         }
     },
     {
         "SYSTEM",
         {
-            { "BUZZER",   0,   1,  1,   1,   1 },                               // 蜂鸣器开关
-            { "DEBOUNCE", 1,  50,  1,  10,  10 },                               // 按键消抖(ms)
-            { "LONGTIME",200,2000,100, 800, 800 },                              // 长按判定(ms)
+            { "UNUSED1", 0, 1, 1, 0, 0 },
+            { "UNUSED2", 0, 1, 1, 0, 0 },
+            { "UNUSED3", 0, 1, 1, 0, 0 },
         }
-    },
+    }
 };
 
 static app_param_store_struct app_param_store;                                  // 掉电保存数据
@@ -282,15 +283,12 @@ uint8 app_param_get_last_result (void)
 //                 菜单里改参数 -> 立即调用本函数 -> 硬件行为随之改变
 // 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
-void app_param_apply_to_bsp (void)
-{
-    // 显示组
-    bsp_lcd_set_backlight((app_param_get_item(1, 0)->value > 0) ? (1) : (0));    // BRIGHT  -> 背光开关
-    bsp_pit_led_set_period((uint32)app_param_get_item(1, 2)->value);            // LEDBLINK-> 定时中断 LED 周期
-
-    // 系统组
-    bsp_key_set_debounce_ms((uint16)app_param_get_item(2, 1)->value);           // DEBOUNCE-> 按键消抖时间
-    bsp_key_set_long_press_ms((uint16)app_param_get_item(2, 2)->value);         // LONGTIME-> 长按判定时间
-
-    // MOTOR 组为下一轮 PID 预留参数，本轮只做记录与掉电保存
+void app_param_apply_to_bsp (void) {
+    // 更新 PID
+    Kp = (float)app_param_get_item(0, 0)->value;
+    Ki = (float)app_param_get_item(0, 1)->value;
+    Kd = (float)app_param_get_item(0, 2)->value;
+    
+    // 更新 PWM 波形频率
+    bsp_motor_set_pwm_freq(app_param_get_item(1, 1)->value * 1000);
 }

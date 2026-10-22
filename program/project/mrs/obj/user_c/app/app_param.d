@@ -88,7 +88,9 @@ user_c/app/app_param.o: \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_key.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_param.h:
 
@@ -267,3 +269,7 @@ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h:
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_key.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h:
+
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h:
+
+c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h:

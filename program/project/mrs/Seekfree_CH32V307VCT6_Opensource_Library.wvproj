@@ -10,10 +10,14 @@
 			"rtos": "NoneOS",
 			"mcu": "CH32V307VCT6",
 			"description": "ROM(byte): 256K, SRAM(byte): 64K, CHIP PINS: 100, GPIO PORTS: 80.\\nWCH CH32V3 series of mainstream MCUs covers the needs of a large variety of applications in the industrial,medical and consumer markets. High performance with first-class peripherals and low-power,low-voltage operation is paired with a high level of integration at accessible prices with a simple architecture and easy-to-use tools.",
+			"tempratureScope": "",
+			"artifactType": "executable",
 			"link": "WCH-Link",
 			"peripheral_version": "1.5",
 			"calibrateSupport": false,
+			"calibrateCommand": "",
 			"UIConfigSupport": false,
+			"UIConfigCommand": "",
 			"externalFlashSupport": false
 		},
 		"linkedFolders": [
@@ -59,6 +63,26 @@
 				"parentLogicPath": "",
 				"type": "file",
 				"name": "*.wvproj"
+			},
+			{
+				"parentLogicPath": "user_c/bsp",
+				"type": "file",
+				"name": "bsp_pwm.c"
+			},
+			{
+				"parentLogicPath": "user_h/bsp",
+				"type": "file",
+				"name": "bsp_pwm.h"
+			},
+			{
+				"parentLogicPath": "user_h/bsp",
+				"type": "file",
+				"name": "bsp_led.h"
+			},
+			{
+				"name": "bsp_led.c",
+				"parentLogicPath": "user_c/bsp",
+				"type": "file"
 			}
 		],
 		"projectName": "Seekfree_CH32V307VCT6_Opensource_Library",
@@ -466,7 +490,7 @@
 			"showDebugOutputTimestamps": true
 		},
 		"reserve": {
-			"PROGRAM_NAME": "obj\\Seekfree_CH32V307VCT6_Opensource_Library.elf",
+			"PROGRAM_NAME": "obj/Seekfree_CH32V307VCT6_Opensource_Library.elf",
 			"PROJECT_ATTR": "Seekfree_CH32V307VCT6_Opensource_Library",
 			"PROJECT_BUILD_CONFIG_AUTO_ATTR": false,
 			"PROJECT_BUILD_CONFIG_ID_ATTR": "",

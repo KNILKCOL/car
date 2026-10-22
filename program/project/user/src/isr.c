@@ -351,9 +351,8 @@ void TIM6_IRQHandler(void)
 
 void TIM7_IRQHandler(void)
 {
-    // -----------------* 任务6：定时器中断直接控制 LED 翻转 *-----------------
-    bsp_pit_led_isr();
-    // -----------------* 任务6：定时器中断直接控制 LED 翻转 *-----------------
+    // 改为跑 PID 控制环
+    bsp_pit_control_isr(); 
 }
 
 

@@ -88,14 +88,15 @@ user_c/app/app_main.o: \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_ui.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_menu.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_param.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_system.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_led.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_grayscale.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h:
 
@@ -273,18 +274,20 @@ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_ui.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_menu.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_menu.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_param.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_system.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_led.h:
-
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h:
+
+c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_grayscale.h:
+
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h:

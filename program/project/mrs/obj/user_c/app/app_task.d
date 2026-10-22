@@ -1,6 +1,7 @@
 user_c/app/app_task.o: \
  c:/Users/32656/Desktop/car/car/program/project/user/src/app/app_task.c \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_common/zf_common_headfile.h \
  c:/Users/32656/Desktop/car/car/program/libraries/sdk/Peripheral/ch32v30x_adc.h \
@@ -89,14 +90,12 @@ user_c/app/app_task.o: \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_ui.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_param.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_led.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_flash.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_exti.h
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h:
+
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h:
 
@@ -274,14 +273,6 @@ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_param.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_led.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h:
-
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h:
-
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_lcd.h:
-
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_flash.h:
-
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_exti.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_motor.h:

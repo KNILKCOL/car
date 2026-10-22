@@ -76,5 +76,37 @@
         <arguments>1.0-name-matches-false-false-*.wvproj</arguments>
       </matcher>
     </filter>
+    <filter>
+      <name>user_c/bsp</name>
+      <type>6</type>
+      <matcher>
+        <id>org.eclipse.ui.ide.multiFilter</id>
+        <arguments>1.0-name-matches-false-false-bsp_pwm.c</arguments>
+      </matcher>
+    </filter>
+    <filter>
+      <name>user_h/bsp</name>
+      <type>6</type>
+      <matcher>
+        <id>org.eclipse.ui.ide.multiFilter</id>
+        <arguments>1.0-name-matches-false-false-bsp_pwm.h</arguments>
+      </matcher>
+    </filter>
+    <filter>
+      <name>user_h/bsp</name>
+      <type>6</type>
+      <matcher>
+        <id>org.eclipse.ui.ide.multiFilter</id>
+        <arguments>1.0-name-matches-false-false-bsp_led.h</arguments>
+      </matcher>
+    </filter>
+    <filter>
+      <name>user_c/bsp</name>
+      <type>6</type>
+      <matcher>
+        <id>org.eclipse.ui.ide.multiFilter</id>
+        <arguments>1.0-name-matches-false-false-bsp_led.c</arguments>
+      </matcher>
+    </filter>
   </filteredResources>
 </projectDescription>

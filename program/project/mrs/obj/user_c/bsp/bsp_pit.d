@@ -84,9 +84,8 @@ user_c/bsp/bsp_pit.o: \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_device/zf_device_ble6a20.h \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_components/seekfree_assistant.h \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_components/seekfree_assistant_interface.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_led.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_key.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_key.h
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pit.h:
 
@@ -256,8 +255,6 @@ c:/Users/32656/Desktop/car/car/program/libraries/zf_components/seekfree_assistan
 
 c:/Users/32656/Desktop/car/car/program/libraries/zf_components/seekfree_assistant_interface.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_led.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_pid.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_key.h:
-
-c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_pwm.h:

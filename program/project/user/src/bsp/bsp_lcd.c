@@ -144,25 +144,15 @@ void bsp_lcd_fill_rect (uint16 x, uint16 y, uint16 w, uint16 h, uint16 color)
 // 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
 void bsp_lcd_draw_test_pattern (void)
-{
-    bsp_lcd_clear(RGB565_RED);
-    system_delay_ms(250);
-    bsp_lcd_clear(RGB565_GREEN);
-    system_delay_ms(250);
-    bsp_lcd_clear(RGB565_BLUE);
-    system_delay_ms(250);
-    bsp_lcd_clear(RGB565_WHITE);
-    system_delay_ms(250);
+{  bsp_lcd_clear(RGB565_BLACK);
+   tft180_set_color(RGB565_BLACK, RGB565_WHITE);
+   tft180_draw_line(4, 10, 124, 14, RGB565_GREEN);
+   system_delay_ms(250);
+  char str[10] = "zhangkun";
+  bsp_lcd_puts (5, 6, str);
+   system_delay_ms(500);
 
-    bsp_lcd_clear(RGB565_BLACK);
-    tft180_set_color(RGB565_BLACK, RGB565_WHITE);
-    tft180_draw_line(0, 0, BSP_LCD_W - 4, 0, RGB565_RED);
-    tft180_draw_line(0, 0, 0, BSP_LCD_H - 4, RGB565_GREEN);
-    tft180_draw_line(0, BSP_LCD_H - 4, BSP_LCD_W - 4, BSP_LCD_H - 4, RGB565_BLUE);
-    tft180_draw_line(BSP_LCD_W - 4, 0, BSP_LCD_W - 4, BSP_LCD_H - 4, RGB565_YELLOW);
-    system_delay_ms(250);
 }
-
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     屏幕背光开关
 // 参数说明     on           1-打开背光 0-关闭背光

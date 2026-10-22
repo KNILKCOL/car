@@ -16,9 +16,9 @@
 #ifndef _app_menu_h_
 #define _app_menu_h_
 
-#include "app_task.h"
+#include "app_main.h"  // 依赖 main 里的结构体
 
-// 三级菜单页面对象
+// 告诉编译器有这个菜单页面
 extern const app_page_struct app_menu_page;
 
 #endif

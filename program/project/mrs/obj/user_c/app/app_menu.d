@@ -1,7 +1,7 @@
 user_c/app/app_menu.o: \
  c:/Users/32656/Desktop/car/car/program/project/user/src/app/app_menu.c \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_menu.h \
- c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h \
+ c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h \
  c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h \
  c:/Users/32656/Desktop/car/car/program/libraries/zf_common/zf_common_headfile.h \
  c:/Users/32656/Desktop/car/car/program/libraries/sdk/Peripheral/ch32v30x_adc.h \
@@ -94,7 +94,7 @@ user_c/app/app_menu.o: \
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_menu.h:
 
-c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_task.h:
+c:/Users/32656/Desktop/car/car/program/project/user/inc/app/app_main.h:
 
 c:/Users/32656/Desktop/car/car/program/project/user/inc/bsp/bsp_board.h:
 

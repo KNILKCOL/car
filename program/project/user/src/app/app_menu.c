@@ -25,7 +25,6 @@ static int32 app_menu_edit_backup = 0;                                          
 
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     三级菜单：进入
-// 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
 static void app_menu_init (void)
 {
@@ -36,7 +35,6 @@ static void app_menu_init (void)
 
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     三级菜单：整页重绘
-// 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
 static void app_menu_draw (void)
 {
@@ -111,7 +109,6 @@ static void app_menu_draw (void)
 
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     三级菜单：周期刷新
-// 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
 static void app_menu_update (void)
 {
@@ -120,7 +117,6 @@ static void app_menu_update (void)
 
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     三级菜单：按键处理
-// 返回参数     void
 //-------------------------------------------------------------------------------------------------------------------
 static void app_menu_key (bsp_key_enum key, bsp_key_state_enum state)
 {
@@ -157,7 +153,6 @@ static void app_menu_key (bsp_key_enum key, bsp_key_state_enum state)
             {
                 app_menu_item  = 0;
                 app_menu_level = APP_MENU_LEVEL_ITEM;                           // 进入第 2 级
-                app_task_beep(30);
                 redraw = 1;
             }
             else if(BSP_KEY_KEY1 == key)
@@ -192,13 +187,11 @@ static void app_menu_key (bsp_key_enum key, bsp_key_state_enum state)
                 item = app_param_get_item(app_menu_group, app_menu_item);
                 app_menu_edit_backup = item->value;                             // 备份，便于放弃修改
                 app_menu_level = APP_MENU_LEVEL_EDIT;                           // 进入第 3 级
-                app_task_beep(30);
                 redraw = 1;
             }
             else if(BSP_KEY_KEY1 == key)
             {
                 app_menu_level = APP_MENU_LEVEL_GROUP;                          // 返回第 1 级
-                app_task_beep(20);
                 redraw = 1;
             }
             break;
@@ -226,7 +219,6 @@ static void app_menu_key (bsp_key_enum key, bsp_key_state_enum state)
                 {
                     // 长按中键：恢复该参数默认值
                     app_param_set_value(app_menu_group, app_menu_item, item->def_value);
-                    app_task_beep(80);
                 }
                 else
                 {
@@ -234,7 +226,6 @@ static void app_menu_key (bsp_key_enum key, bsp_key_state_enum state)
                     app_param_apply_to_bsp();
                     app_param_save();
                     app_menu_level = APP_MENU_LEVEL_ITEM;
-                    app_task_beep(50);
                 }
                 redraw = 1;
             }
@@ -243,7 +234,6 @@ static void app_menu_key (bsp_key_enum key, bsp_key_state_enum state)
                 // 放弃修改：恢复进入第 3 级之前的值
                 app_param_set_value(app_menu_group, app_menu_item, app_menu_edit_backup);
                 app_menu_level = APP_MENU_LEVEL_ITEM;
-                app_task_beep(20);
                 redraw = 1;
             }
             break;
